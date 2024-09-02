@@ -1,0 +1,88 @@
+.navbar {
+    background: linear-gradient(90deg, #003d3b, #1a5c5a);
+}
+
+.navbar .logo{
+    height: 80px;
+    transition: height 0.3s ease;
+}
+
+.donation-icon
+{
+    height: 40px;
+}
+
+.navbar-nav .nav-link {
+    position: relative;
+    transition: color 0.3s, transform 0.3s;
+}
+
+.navbar-nav .nav-link:hover {
+    color: #fff597;
+    
+}
+
+.navbar-nav .nav-link::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 0;
+    height: 2px;
+    background-color: #fff597;
+    transition: width 0.3s;
+}
+
+.navbar-nav .nav-link:hover::after {
+    width: 100%;
+}
+
+@media (max-width: 576px) {
+    .navbar .logo {
+        height: 60px;
+    }
+
+    .navbar-nav .nav-link {
+        transition: none;
+    }
+
+    .navbar-nav .nav-link::after {
+        content: none;
+    }
+
+    .navbar-nav .nav-link:hover {
+        color: inherit;
+        transform: none;
+    }
+}
+
+@media (min-width: 991.9px) {
+
+    .nav-item {
+        display: flex;        
+        align-items: center;}
+}
+
+@media (max-width: 991.9px) {
+    .navbar-nav .nav-link {
+        padding-left: 0; 
+        text-align: center; 
+        display: block; 
+        margin-bottom: 10px;
+        background: #006559;
+        color: #fff;
+        border-radius: 4px;
+    }
+
+    .donation-icon {
+        display: block;
+        margin: 0 auto; 
+    }
+}
+
+
+.nav-item {
+    text-align: center;
+   
+}
+
