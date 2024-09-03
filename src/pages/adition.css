@@ -8,15 +8,10 @@
 }
 
 
-@media (min-width: 901px) {
-    #root {
-        width: 84%; 
-        margin: 0 auto; 
-    }
-}
 
 
-@media (max-width: 950px) {
+
+@media (max-width: 991.9px) {
     
     #root  {
         width: 100%; 

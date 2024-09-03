@@ -15,7 +15,7 @@ const Home = () => {
     
       <div className="container-md py-4">
         <div className="row">
-          <div className="col-md-6 mb-4">
+          <div className="col-md-6">
             <div className="bg-white rounded shadow-sm p-4">
               <h2 className="text-center mb-4" id="titull">Кто мы?</h2>
               <p style={{ textAlign: 'justify' }} id="zagolovok">
@@ -25,6 +25,7 @@ const Home = () => {
           </div>
     
           <div className="col-md-6">
+          <div className="table-responsive py-4">
             <table className="schedule-table">
               <thead>
                 <tr>
@@ -58,6 +59,7 @@ const Home = () => {
                             </tr>
                         </tbody>
             </table>
+          </div>
           </div>
         </div>
       </div>

@@ -11,15 +11,14 @@ const Events = () => {
         </p>
       </div>
 
-      <div className="container py-4 px-4">
-        <div className="row">
-          <div className="col-md-5">
-            <h4 id="titul" className="container py-4">Предстоящие</h4>
+      <div className="container py-4">
+        <div className="row ">
+          <div className="col-md-6">
             <div className="table-responsive py-4">
               <table className="schedule-table">
                 <thead className="thead-light">
                   <tr>
-                    <th>Мероприятие</th>
+                    <th>Предстоящие мероприятия</th>
                     <th>Дата</th>
                     <th>Время</th>
                   </tr>
@@ -60,7 +59,7 @@ const Events = () => {
             </div>
           </div>
 
-          <div className="col-md-7">
+          <div className="col-md-6">
             <div id="carouselExampleCaptions" className="carousel slide">
               <div className="carousel-indicators">
                 <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" className="active" aria-current="true" aria-label="Slide 1"></button>
@@ -70,18 +69,19 @@ const Events = () => {
               </div>
               <div className="carousel-inner">
                 <div className="carousel-item active">
-                  <img src="./images/yl1.jpg" className="d-block w-100" alt="younglife" />
+                  <img src="./images/yl1.jpg" className="img-fluid w-100" style={{ objectFit: 'cover', height: '100%' }} alt="younglife" />
                 </div>
                 <div className="carousel-item">
-                  <img src="./images/yl2.jpg" className="d-block w-100" alt="younglife" />
+                  <img src="./images/yl2.jpg" className="img-fluid w-100" style={{ objectFit: 'cover', height: '100%' }} alt="younglife" />
                 </div>
                 <div className="carousel-item">
-                  <img src="./images/yl4.jpg" className="d-block w-100" alt="younglife" />
+                  <img src="./images/yl4.jpg" className="img-fluid w-100" style={{ objectFit: 'cover', height: '100%' }} alt="younglife" />
                 </div>
                 <div className="carousel-item">
-                  <img src="./images/yl3.jpg" className="d-block w-100" alt="younglife" />
+                  <img src="./images/yl3.jpg" className="img-fluid w-100" style={{ objectFit: 'cover', height: '100%' }} alt="younglife" />
                 </div>
               </div>
+
               <button className="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
                 <span className="carousel-control-prev-icon" aria-hidden="true"></span>
                 <span className="visually-hidden">Предыдущий</span>
