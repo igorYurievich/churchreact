@@ -11,12 +11,16 @@ const Donate = () => {
         каждому, кто нуждается в помощи.
       </p>
 
-      <div className="card-body" id="citata">
-        <blockquote className="blockquote mb-0" style={{ fontStyle: 'italic', padding: '1rem' }}>
-          <p>“Каждый пусть дает так, как решил в сердце своем, не с сожалением и не с принуждением, ибо доброохотного даятеля любит Бог.”</p>
-          <footer className="blockquote-footer">2 Коринфянам 9:7</footer>
-        </blockquote>
+
+      <div className="card">
+        <div className="card-body" id="citata">
+          <blockquote className="blockquote mb-0" style={{ fontStyle: 'italic' }}>
+            <p>“Каждый пусть дает так, как решил в сердце своем, не с сожалением и не с принуждением, ибо доброохотного даятеля любит Бог.”</p>
+            <footer className="blockquote-footer">2 Коринфянам 9:7</footer>
+          </blockquote>
+        </div>
       </div>
+    
 
       <div className="container">
         <div className="row justify-content-center">
