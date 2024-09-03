@@ -181,7 +181,7 @@ const Home = () => {
 
 
       <div className="text-center mt-4">
-        <a href="/events" className="btn btn-primary">Узнайте больше о наших мероприятиях</a>
+        <a href="/events" className="btn btn-primary" id="knowmore">Узнайте больше о наших мероприятиях</a>
       </div>
 
       </div>
@@ -207,7 +207,7 @@ const Home = () => {
             <label htmlFor="message" className="form-label">Ваше сообщение</label>
             <textarea className="form-control" id="message" name="message" rows="4" placeholder="Добрый вечер! Я бы хотел узнать подробнее о вашей церкви" required></textarea>
           </div>
-          <button type="submit" className="btn btn-primary">Отправить</button>
+          <button type="submit" className="btn btn-primary" id="knowmore">Отправить</button>
         </form>
       </div>
     

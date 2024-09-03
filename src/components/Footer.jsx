@@ -5,7 +5,7 @@ const Footer = () => {
   return (
     <div className="py-5 text-light" id="footer">
       <div className="d-flex flex-column flex-md-row justify-content-center align-items-center">
-        <p id="titull" className="mt-4 mb-0">&copy; I Baptist Church in Torrevieja.</p>
+        <p id="titul" className="mt-4 mb-0">&copy; I Baptist Church in Torrevieja.</p>
 
         <div className="col-6 d-flex justify-content-around container mt-3 py-3">
           <a

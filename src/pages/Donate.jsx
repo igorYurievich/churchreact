@@ -1,5 +1,5 @@
 import React from 'react';
-
+import './adition.css';
 const Donate = () => {
   return (
     <div className="corpo">
@@ -42,7 +42,7 @@ const Donate = () => {
                   <strong>Назначение платежа:</strong> Пожертвование
                 </li>
                 <li className="list-group-item text-center my-2">
-                  <a href="https://www.donationalerts.com/" className="btn btn-primary btn-lg mt-3 shiny-button" target="_blank" rel="noopener noreferrer">
+                  <a href="https://www.donationalerts.com/" className="btn btn-primary btn-lg mt-3" id="shiny-button" target="_blank" rel="noopener noreferrer">
                     <strong>Сделать Пожертвование</strong>
                   </a>
                 </li>

@@ -1,7 +1,49 @@
 #titull {
     font-family: 'Vollda', sans-serif;
     font-weight: bold;
-   
+    color: #0F4D4A
+}
+#knowmore {
+    background-color:#0F4D4A;
+}
+
+#shiny-button {
+    background: linear-gradient(90deg, #4b6cb7, #182848, #34e89e, #0f3443);
+    background-size: 300%;
+    color: white;
+    border: none;
+    transition: background-position 0.5s ease-in-out;
+    position: relative;
+    overflow: hidden;
+}
+
+#shiny-button:hover {
+    background-position: right;
+}
+
+#shiny-button::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(to right, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0));
+    transform: rotate(45deg);
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+#shiny-button:hover::before {
+    opacity: 1;
+    top: -50%;
+    left: 150%;
+    transition: opacity 0.5s ease, left 1s ease;
+}
+
+
+#knowmore:hover {
+    background-color:#14615d;
 }
 
 

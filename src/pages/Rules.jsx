@@ -5,7 +5,7 @@ const Rules = () => {
     
     <div className="corpo">
     <div className="container">
-      <h1 id="titul" className="py-4">Церковный устав</h1>
+      <h1 id="titull" className="container py-4 text-center">Церковный устав</h1>
 
       <div className="card">
         <div className="card-body" id="citata">

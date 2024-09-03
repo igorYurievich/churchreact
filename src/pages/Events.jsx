@@ -5,7 +5,7 @@ const Events = () => {
     <div className="corpo">
     
       <div className="container">
-        <h1 id="titul" className="container py-4">Наши мероприятия</h1>
+        <h1 id="titull" className="container py-4 text-center">Наши мероприятия</h1>
         <p className="container py-4" style={{ textAlign: 'justify' }} id="zagolovok">
           Добро пожаловать на страницу мероприятий! Здесь вы найдёте информацию о предстоящих событиях и важных мероприятиях нашей общины. Мы надеемся, что каждый найдёт для себя что-то полезное и духовно обогащающее. Следите за обновлениями и присоединяйтесь к нашей церковной жизни. Да благословит Вас Господь!
         </p>
@@ -92,24 +92,26 @@ const Events = () => {
               </button>
             </div>
             <div className="accordion" id="accordionExample">
-              <div className="accordion-item">
-                <h2 className="accordion-header">
-                  <button className="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                    <strong id="titull">О Young Life</strong>
-                  </button>
-                </h2>
-                <div id="collapseOne" className="accordion-collapse collapse show" data-bs-parent="#accordionExample">
-                  <div className="accordion-body" style={{ textAlign: 'justify' }}>
-                    <p>
-                      <strong>Young Life</strong> — это динамичное движение, посвященное молодежному служению. Наша команда активно работает с подростками и молодежью, создавая увлекательные и полезные рубрики, которые способствуют духовному развитию и укреплению веры. Мы организуем встречи и мероприятия каждую субботу в 16:00 в нашей церкви, где каждый может хорошо провести время и развиваться духовно. Присоединяйтесь к нам и станьте частью нашего локального сообщества в Торревьехе!
-                    </p>
-                    <a href="https://www.instagram.com/younglife.torre/" target="_blank" rel="noopener noreferrer" title="Instagram" className="ylinsta">
-                      <i className="fab fa-instagram"></i>
-                      <span>Следите за нами в Instagram!</span>
-                    </a>
-                  </div>
-                </div>
-              </div>
+            <div className="accordion-item">
+  <h2 className="accordion-header">
+    <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne" style={{ backgroundColor: '#fff', color: '#000', borderColor: '#ddd' }}>
+      <strong id="titul">О Young Life</strong>
+    </button>
+  </h2>
+  <div id="collapseOne" className="accordion-collapse collapse" data-bs-parent="#accordionExample">
+    <div className="accordion-body" style={{ textAlign: 'justify' }}>
+      <p>
+        <strong>Young Life</strong> — это динамичное движение, посвященное молодежному служению. Наша команда активно работает с подростками и молодежью, создавая увлекательные и полезные рубрики, которые способствуют духовному развитию и укреплению веры. Мы организуем встречи и мероприятия каждую субботу в 16:00 в нашей церкви, где каждый может хорошо провести время и развиваться духовно. Присоединяйтесь к нам и станьте частью нашего локального сообщества в Торревьехе!
+      </p>
+      <a href="https://www.instagram.com/younglife.torre/" target="_blank" rel="noopener noreferrer" title="Instagram" className="ylinsta">
+        <i className="fab fa-instagram"></i>
+        <span>Следите за нами в Instagram!</span>
+      </a>
+    </div>
+  </div>
+</div>
+
+
             </div>
           </div>
         </div>
