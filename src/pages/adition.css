@@ -1,3 +1,39 @@
+
+
+
+#root {
+   
+    margin: 0 auto;
+    width: 84%;
+}
+
+
+@media (min-width: 901px) {
+    #root {
+        width: 84%; 
+        margin: 0 auto; 
+    }
+}
+
+
+@media (max-width: 950px) {
+    
+    #root  {
+        width: 100%; 
+        margin: 0; 
+    }
+}
+
+
+body {
+    background-image: url('public/images/bg2.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+
 #titull {
     font-family: 'Vollda', sans-serif;
     font-weight: bold;

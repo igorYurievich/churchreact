@@ -14,7 +14,7 @@ const Media = () => {
         <div className="accordion" id="accordionExample">
           <div className="accordion-item">
             <h2 className="accordion-header" id="headingOne">
-              <button className="accordion-button collapsed" id="titull" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+              <button className="accordion-button collapsed" id="titul" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
                 Видео
               </button>
             </h2>
@@ -46,7 +46,7 @@ const Media = () => {
 
           <div className="accordion-item">
             <h2 className="accordion-header" id="headingService">
-              <button className="accordion-button collapsed" id="titull" type="button" data-bs-toggle="collapse" data-bs-target="#collapseService" aria-expanded="false" aria-controls="collapseService">
+              <button className="accordion-button collapsed" id="titul" type="button" data-bs-toggle="collapse" data-bs-target="#collapseService" aria-expanded="false" aria-controls="collapseService">
                 Служение
               </button>
             </h2>
@@ -78,7 +78,7 @@ const Media = () => {
 
           <div className="accordion-item">
             <h2 className="accordion-header" id="headingBaptismtwo">
-              <button className="accordion-button collapsed" id="titull" type="button" data-bs-toggle="collapse" data-bs-target="#collapseBaptismtwo" aria-expanded="false" aria-controls="collapseBaptismtwo">
+              <button className="accordion-button collapsed" id="titul" type="button" data-bs-toggle="collapse" data-bs-target="#collapseBaptismtwo" aria-expanded="false" aria-controls="collapseBaptismtwo">
                 Крещение 15.10.2023
               </button>
             </h2>
@@ -128,7 +128,7 @@ const Media = () => {
 
           <div className="accordion-item">
             <h2 className="accordion-header" id="headingBaptism">
-              <button className="accordion-button collapsed" id="titull" type="button" data-bs-toggle="collapse" data-bs-target="#collapseBaptism" aria-expanded="false" aria-controls="collapseBaptism">
+              <button className="accordion-button collapsed" id="titul" type="button" data-bs-toggle="collapse" data-bs-target="#collapseBaptism" aria-expanded="false" aria-controls="collapseBaptism">
                 Крещение 24.09.2022
               </button>
             </h2>
