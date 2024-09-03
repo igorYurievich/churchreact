@@ -809,4 +809,4 @@ const Faith = () => {
   );
 };
 
-export default Faith;
+export {Faith};

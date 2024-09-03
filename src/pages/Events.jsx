@@ -118,4 +118,4 @@ const Events = () => {
   );
 };
 
-export default Events;
+export {Events};

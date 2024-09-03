@@ -3,7 +3,7 @@ import './adition.css';
 const Media = () => {
   return (
     <div className="corpo">
-      <div className="container py-4">
+      <div className="container pt-4">
         <h1 id="titul" className="container">Видео и фотографии</h1>
         <p className="container py-4" style={{ textAlign: 'justify' }} id="zagolovok">
           Приветствуем вас на нашей странице с фотографиями и видео! Здесь вы найдете яркие моменты с наших богослужений, встреч и других мероприятий.
@@ -164,4 +164,4 @@ const Media = () => {
   );
 };
 
-export default Media;
+export {Media};

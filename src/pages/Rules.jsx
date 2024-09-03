@@ -2,6 +2,7 @@ import React from 'react';
 
 const Rules = () => {
   return (
+    
     <div className="corpo">
     <div className="container">
       <h1 id="titul" className="py-4">Церковный устав</h1>
@@ -497,8 +498,8 @@ const Rules = () => {
 
 
     </div>
-    </div>
+    </div> 
   );
 };
 
-export default Rules;
+export {Rules};

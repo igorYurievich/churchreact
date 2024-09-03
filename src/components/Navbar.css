@@ -72,6 +72,11 @@
         background: #006559;
         color: #fff;
         border-radius: 4px;
+        transition: background-color 0.3s;
+    }
+
+    .navbar-nav .nav-link:active {
+        background-color: #007d71; /* Цвет при нажатии */
     }
 
     .donation-icon {
@@ -79,6 +84,7 @@
         margin: 0 auto; 
     }
 }
+
 
 
 .nav-item {

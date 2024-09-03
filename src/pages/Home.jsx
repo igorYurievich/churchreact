@@ -180,9 +180,10 @@ const Home = () => {
 </div>
 
 
-        <div className="text-center mt-4">
-          <a href="events.html" className="btn btn-primary">Узнайте больше о наших мероприятиях</a>
-        </div>
+      <div className="text-center mt-4">
+        <a href="/events" className="btn btn-primary">Узнайте больше о наших мероприятиях</a>
+      </div>
+
       </div>
     
       <hr />
@@ -263,4 +264,4 @@ const Home = () => {
   );
 };
 
-export default Home;
+export {Home};
