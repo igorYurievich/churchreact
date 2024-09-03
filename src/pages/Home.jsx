@@ -15,17 +15,17 @@ const Home = () => {
     
       <div className="container-md py-4">
         <div className="row">
-          <div className="col-md-6">
+          <div className="col-md-6 d-flex align-items-center">
             <div className="bg-white rounded shadow-sm p-4">
               <h2 className="text-center mb-4" id="titull">Кто мы?</h2>
-              <p style={{ textAlign: 'justify' }} id="zagolovok">
+              <p style={{ textAlign: 'justify' }} id="intro">
               Мы — Первая Баптистская Церковь в Торревьехе, и нам уже больше двух лет. Мы — сообщество верующих, стремящихся расти в вере и служении. Наша церковь проводит регулярные богослужения, молитвенные встречи и различные мероприятия, создавая уникальную атмосферу для наших посетителей. Мы рады каждому, кто хочет узнать больше о Боге, поделиться своими переживаниями или найти поддержку в духовном пути. Присоединяйтесь к нам и станьте частью нашей дружной и гостеприимной семьи!
               </p>
             </div>
           </div>
     
           <div className="col-md-6">
-          <div className="table-responsive py-4">
+          <div className="table-responsive">
             <table className="schedule-table">
               <thead>
                 <tr>

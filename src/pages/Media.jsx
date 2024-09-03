@@ -27,7 +27,7 @@ const Media = () => {
     <div className="corpo">
       <div className="container">
         <h1 id="titull" className="container pt-4 text-center">Видео и фотографии</h1>
-        <p className="container py-4" style={{ textAlign: 'justify' }} id="zagolovok">
+        <p className="container py-4" style={{ textAlign: 'justify' }} id="intro">
           Приветствуем вас на нашей странице с фотографиями и видео! Здесь вы найдете яркие моменты с наших богослужений, встреч и других мероприятий.
         </p>
       </div>

@@ -5,8 +5,8 @@ const Events = () => {
     <div className="corpo">
     
       <div className="container">
-        <h1 id="titull" className="container py-4 text-center">Наши мероприятия</h1>
-        <p className="container py-4" style={{ textAlign: 'justify' }} id="zagolovok">
+        <h1 id="titull" className="container pt-4 text-center">Наши мероприятия</h1>
+        <p className="container py-4" style={{ textAlign: 'justify' }} id="intro">
           Добро пожаловать на страницу мероприятий! Здесь вы найдёте информацию о предстоящих событиях и важных мероприятиях нашей общины. Мы надеемся, что каждый найдёт для себя что-то полезное и духовно обогащающее. Следите за обновлениями и присоединяйтесь к нашей церковной жизни. Да благословит Вас Господь!
         </p>
       </div>

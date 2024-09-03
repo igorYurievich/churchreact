@@ -40,7 +40,7 @@
 
           @font-face {
             font-family: 'aa';
-            src: url('../fonts/Vollda-Bold.otf') format('truetype');
+            src: url('../fonts/Rubik.ttf') format('truetype');
         }
         #titul {
     font-family: 'aa', sans-serif;
@@ -196,7 +196,7 @@
         
         .contact-info-container h2 {
             color: #0f4d4a;
-            font-family: 'Vollda', sans-serif;
+            font-family: 'Rubik', sans-serif;
             margin-bottom: 20px;
         }
         

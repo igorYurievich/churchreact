@@ -5,7 +5,7 @@ const Donate = () => {
     <div className="corpo">
     <div className="container py-4">
       <h1 className="text-center" id="titull">Поддержите нашу Церковь</h1>
-      <p className="container py-4" style={{ textAlign: 'justify' }} id="zagolovok">
+      <p className="container py-4" style={{ textAlign: 'justify' }} id="intro">
         Ваша поддержка позволяет нам продолжать нашу миссию, распространять Слово Божие и помогать нуждающимся. 
         Мы искренне благодарны за каждое пожертвование и уверены, что оно принесёт пользу нашему сообществу и 
         каждому, кто нуждается в помощи.

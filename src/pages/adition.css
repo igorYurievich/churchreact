@@ -31,8 +31,17 @@ body {
 }
 */
 
+#intro {
+    
+  font-family: "Rubik", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 18px;
+}
+
 #titull {
-    font-family: 'Vollda', sans-serif;
+    font-family: 'Rubik', sans-serif;
     font-weight: bold;
     color: #0F4D4A
 }
@@ -81,7 +90,7 @@ body {
 
 
 #zagolovok {
-    font-family: 'Vollda', sans-serif;
+    font-family: 'Rubik', sans-serif;
     font-weight: bold;
     font-size: 1.2em;
 }
@@ -97,8 +106,8 @@ body {
 
 
 @font-face {
-    font-family: 'Vollda';
-    src: url('../fonts/Vollda-Bold.otf') format('truetype');
+    font-family: 'Rubik';
+    src: url('../fonts/Rubik.ttf') format('truetype');
 }
 
 .corpo {
