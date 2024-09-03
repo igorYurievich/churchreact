@@ -1,4 +1,3 @@
-// src/NavBar.jsx
 import React from 'react';
 import { Link } from 'react-router-dom';
 import './Navbar.css'
@@ -23,19 +22,19 @@ const NavBar = () => {
         <div className="collapse navbar-collapse justify-content-end" id="navbarNav">
           <ul className="navbar-nav py-2">
             <li className="nav-item">
-              <Link className="nav-link text-light" to="/events">Мероприятия</Link>
+              <Link className="nav-link text-light" id="titull" to="/events">Мероприятия</Link>
             </li>
             <li className="nav-item">
-              <Link className="nav-link text-light" to="/media">Галерея</Link>
+              <Link className="nav-link text-light" id="titull" to="/media">Галерея</Link>
             </li>
             <li className="nav-item">
-              <Link className="nav-link text-light" to="/rules">Устав</Link>
+              <Link className="nav-link text-light" id="titull" to="/rules">Устав</Link>
             </li>
             <li className="nav-item">
-              <Link className="nav-link text-light" to="/faith">Символ Веры</Link>
+              <Link className="nav-link text-light" id="titull" to="/faith">Символ Веры</Link>
             </li>
             <li className="nav-item">
-              <Link className="nav-link text-light" to="/donate">
+              <Link className="nav-link text-light" id="titull" to="/donate">
                 <img src="./images/donation.png" alt="Donate" className="donation-icon" />
               </Link>
             </li>

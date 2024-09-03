@@ -31,3 +31,37 @@
     margin: 0 auto;
     min-height: 100vh;
 }
+
+.ylinsta {
+    display: flex;
+    align-items: center;
+    
+    background: linear-gradient(45deg, #c13584, #f56040);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+   
+}
+
+.ylinsta i {
+    font-size: 24px;
+    margin-right: 10px;
+}
+
+.ylinsta span {
+    font-size: 16px;
+}
+
+.ylinsta:hover {
+    background: linear-gradient(45deg, #f56040, #c13584);
+   
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.modal-content {
+    width: 100%;
+    background-color: #232528; /* Dark background color */
+    color: #ffffff; /* White text color */
+}
