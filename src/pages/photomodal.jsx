@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faChevronLeft, faChevronRight, faDownload, faTimes } from '@fortawesome/free-solid-svg-icons';
-import './photoModal.css';
+import './photomodal.css';
 
 const PhotoModal = ({ isOpen, currentIndex, images, onClose }) => {
   const [index, setIndex] = useState(currentIndex);
