@@ -68,9 +68,7 @@ const PhotoModal = ({ isOpen, currentIndex, images, onClose }) => {
             <button type="button" className="btn btn-secondary" onClick={handleNext} disabled={index === images.length - 1}>
               <FontAwesomeIcon icon={faChevronRight} />
             </button>
-            <a href="#" className="btn btn-primary" onClick={downloadImage}>
-              <FontAwesomeIcon icon={faDownload} />
-            </a>
+          
             <button type="button" className="btn btn-danger" onClick={onClose}>
               <FontAwesomeIcon icon={faTimes} />
             </button>
