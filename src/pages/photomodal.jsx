@@ -20,7 +20,7 @@ function PhotoModal({ currentIndex, images, showPrevImage, showNextImage }) {
   }, [currentIndex, images, showPrevImage, showNextImage]);
 
   return (
-    <div className="modal fade bg-dark" id="photoModal" tabIndex="-1" aria-labelledby="photoModalLabel" aria-hidden="true">
+    <div className="modal fade" id="photoModal" tabIndex="-1" aria-labelledby="photoModalLabel" aria-hidden="true">
       <div className="modal-dialog modal-dialog-centered modal-lg">
         <div className="modal-content">
           <div className="modal-body text-center">
