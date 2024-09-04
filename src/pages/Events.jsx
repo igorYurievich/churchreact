@@ -3,7 +3,12 @@ import './adition.css';
 const Events = () => {
   return (
     <div className="corpo">
-    
+    <div className="image-container" id="banner">
+        <div className="text-overlay">
+          <h3 id="titul">20/10/2024 - Праздник Жатвы</h3>
+        </div>
+        <img src="/images/eventbanner.jpg" alt="Описание изображения" />
+      </div>
       <div className="container">
         <h1 id="titull" className="container pt-4 text-center">Наши мероприятия</h1>
         <p className="container py-4" style={{ textAlign: 'justify' }} id="intro">
@@ -116,6 +121,10 @@ const Events = () => {
           </div>
         </div>
       </div>
+
+      {/* <h3 className="text-center py-4" id="titull">Предыдущие мероприятия:</h3> */}
+
+
     </div>
   );
 };
