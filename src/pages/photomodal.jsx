@@ -1,77 +1,84 @@
-import { useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faChevronLeft, faChevronRight, faDownload, faTimes } from '@fortawesome/free-solid-svg-icons';
+import './photoModal.css';
 
-function PhotoModal({ currentIndex, images, showPrevImage, showNextImage }) {
+const PhotoModal = ({ isOpen, currentIndex, images, onClose }) => {
+  const [index, setIndex] = useState(currentIndex);
+
   useEffect(() => {
-    const handleKeyDown = (event) => {
-      if (!images || !images.current) return;
+    setIndex(currentIndex);
+  }, [currentIndex, isOpen]);
 
-      if (event.key === 'ArrowLeft' && currentIndex > 0) {
-        showPrevImage();
-      } else if (event.key === 'ArrowRight' && currentIndex < images.current.length - 1) {
-        showNextImage();
+  useEffect(() => {
+    const handleKeyDown = (e) => {
+      if (e.key === 'ArrowRight') {
+        handleNext();
+      } else if (e.key === 'ArrowLeft') {
+        handlePrev();
       }
     };
 
-    window.addEventListener('keydown', handleKeyDown);
+    if (isOpen) {
+      window.addEventListener('keydown', handleKeyDown);
+    }
 
     return () => {
       window.removeEventListener('keydown', handleKeyDown);
     };
-  }, [currentIndex, images, showPrevImage, showNextImage]);
+  }, [isOpen, index]);
+
+  const handleNext = () => {
+    if (index < images.length - 1) {
+      setIndex(index + 1);
+    }
+  };
+
+  const handlePrev = () => {
+    if (index > 0) {
+      setIndex(index - 1);
+    }
+  };
+
+  const downloadImage = () => {
+    const link = document.createElement('a');
+    link.href = images[index];
+    link.download = `image-${index + 1}.jpg`;
+    link.click();
+  };
+
+  if (!isOpen) return null;
 
   return (
-    <div className="modal fade" id="photoModal" tabIndex="-1" aria-labelledby="photoModalLabel" aria-hidden="true">
-      <div className="modal-dialog modal-dialog-centered modal-lg">
-        <div className="modal-content">
-          <div className="modal-body text-center">
-            {images && images.current && currentIndex !== null && (
-              <img
-                id="modalImage"
-                src={images.current[currentIndex].src}
-                className="img-fluid"
-                alt="Modal"
-                style={{ display: 'inline-block' }}
-              />
-            )}
+    <div className="modal fade show" style={{ display: 'block' }} aria-labelledby="photoModalLabel">
+      <div className="modal-dialog modal-dialog-centered">
+        <div className="modal-content bg-dark">
+          <div className="modal-body">
+            <div className="modal-image-container">
+              <img src={images[index]} alt={`Gallery item ${index + 1}`} className="img-fluid" />
+            </div>
           </div>
           <div className="modal-footer justify-content-between">
-            <button
-              type="button"
-              className="btn btn-secondary"
-              onClick={showPrevImage}
-              disabled={!images || currentIndex === 0}
-            >
-              <i className="fas fa-chevron-left"></i>
+            <button type="button" className="btn btn-secondary" onClick={handlePrev} disabled={index === 0}>
+              <FontAwesomeIcon icon={faChevronLeft} />
             </button>
-            <span>
-              {images && images.current && currentIndex !== null
-                ? `Фото ${currentIndex + 1} из ${images.current.length}`
-                : ''}
+            <span className="modal-index">
+              {index + 1} / {images.length}
             </span>
-            <button
-              type="button"
-              className="btn btn-secondary"
-              onClick={showNextImage}
-              disabled={!images || currentIndex === images.current.length - 1}
-            >
-              <i className="fas fa-chevron-right"></i>
+            <button type="button" className="btn btn-secondary" onClick={handleNext} disabled={index === images.length - 1}>
+              <FontAwesomeIcon icon={faChevronRight} />
             </button>
-            <a
-              id="saveImage"
-              className="btn btn-primary"
-              href={images && images.current && currentIndex !== null ? images.current[currentIndex].src : ''}
-              download
-            >
-              <i className="fas fa-download"></i>
+            <a href="#" className="btn btn-primary" onClick={downloadImage}>
+              <FontAwesomeIcon icon={faDownload} />
             </a>
-            <button type="button" className="btn btn-danger" data-bs-dismiss="modal">
-              <i className="fas fa-times"></i>
+            <button type="button" className="btn btn-danger" onClick={onClose}>
+              <FontAwesomeIcon icon={faTimes} />
             </button>
           </div>
         </div>
       </div>
     </div>
   );
-}
+};
 
 export default PhotoModal;
