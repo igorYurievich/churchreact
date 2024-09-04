@@ -59,6 +59,11 @@ const Events = () => {
                     <td>4 октября</td>
                     <td>19:00</td>
                   </tr>
+                  <tr id="specialEvent">
+                    <td>Праздник жатвы</td>
+                    <td>20 октября</td>
+                    <td>19:00</td>
+                  </tr>
                 </tbody>
               </table>
             </div>

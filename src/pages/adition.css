@@ -149,3 +149,18 @@ body {
     background-color: #232528; /* Dark background color */
     color: #ffffff; /* White text color */
 }
+
+
+/*SPECIAL EVENT EVENTS:JSX*/
+
+#specialEvent {
+    background: linear-gradient(to right, #ffefc1, #ffd700); /* Градиентный фон для выделения */
+    color: #d44; /* Цвет текста */
+    font-weight: bold; /* Полужирное начертание шрифта */
+  }
+  
+  
+  /* Добавим немного теней для лучшего выделения */
+  #specialEvent {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
