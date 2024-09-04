@@ -1,16 +1,30 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import './Home.css';
 import './adition.css';
+import { storage, ref, getDownloadURL } from '../firebase'; // Импорт из firebase.js
+
 const Home = () => {
+  const [imageUrl, setImageUrl] = useState('');
+
+  useEffect(() => {
+    const imageRef = ref(storage, 'banners/media134.png');
+
+    getDownloadURL(imageRef)
+      .then((url) => {
+        setImageUrl(url);
+      })
+      .catch((error) => {
+        console.error('Error fetching image URL:', error);
+      });
+  }, []);
+
   return (
     <div className="corpo">
-
-      
       <div className="image-container" id="banner">
         <div className="text-overlay">
           <h1 id="titul">Церковь ЕХБ <br />"Свет Жизни"</h1>
         </div>
-        <img src="/images/media134.png" alt="Описание изображения" />
+        {imageUrl && <img src={imageUrl} alt="Описание изображения" />}
       </div>
     
       <div className="container-md py-4">

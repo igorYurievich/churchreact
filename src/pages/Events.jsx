@@ -1,13 +1,29 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import './adition.css';
+import { storage, ref, getDownloadURL } from '../firebase'; // Импорт из firebase.js
+
 const Events = () => {
+  const [bannerUrl, setBannerUrl] = useState('');
+
+  useEffect(() => {
+    const bannerRef = ref(storage, 'banners/eventbanner.jpg'); // Путь к вашему баннеру в Firebase Storage
+
+    getDownloadURL(bannerRef)
+      .then((url) => {
+        setBannerUrl(url);
+      })
+      .catch((error) => {
+        console.error('Error fetching banner URL:', error);
+      });
+  }, []);
+
   return (
     <div className="corpo">
-    <div className="image-container" id="banner">
+      <div className="image-container" id="banner">
         <div className="text-overlay">
           <h3 id="titul">20/10/2024 - Праздник Жатвы</h3>
         </div>
-        <img src="/images/eventbanner.jpg" alt="Описание изображения" />
+        {bannerUrl && <img src={bannerUrl} alt="Event banner" />}
       </div>
       <div className="container">
         <h1 id="titull" className="container pt-4 text-center">Наши мероприятия</h1>

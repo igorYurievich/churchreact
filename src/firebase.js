@@ -1,7 +1,7 @@
 // src/firebase.js
 import { initializeApp } from 'firebase/app';
 import { getStorage, ref, listAll, getDownloadURL } from 'firebase/storage';
-import storageConfig from './config/storageConfig'; // Импортируйте файл конфигурации
+import storageConfig from './config/storageConfig'; 
 
 const firebaseConfig = {
     apiKey: import.meta.env.VITE_API_KEY,
@@ -16,4 +16,4 @@ const app = initializeApp(firebaseConfig);
 // Используйте URL бакета из конфигурационного файла
 const storage = getStorage(app, storageConfig.bucketUrl);
 
-export { storage, ref, listAll, getDownloadURL }; // Убедитесь, что все функции экспортируются
+export { storage, ref, listAll, getDownloadURL }; 
