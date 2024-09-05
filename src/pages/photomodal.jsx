@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faChevronLeft, faChevronRight, faDownload, faTimes } from '@fortawesome/free-solid-svg-icons';
+import { faChevronLeft, faChevronRight, faTimes } from '@fortawesome/free-solid-svg-icons';
 import './photomodal.css';
 
 const PhotoModal = ({ isOpen, currentIndex, images, onClose }) => {
@@ -40,13 +40,6 @@ const PhotoModal = ({ isOpen, currentIndex, images, onClose }) => {
     }
   };
 
-  const downloadImage = () => {
-    const link = document.createElement('a');
-    link.href = images[index];
-    link.download = `image-${index + 1}.jpg`;
-    link.click();
-  };
-
   if (!isOpen) return null;
 
   return (
@@ -55,19 +48,21 @@ const PhotoModal = ({ isOpen, currentIndex, images, onClose }) => {
         <div className="modal-content bg-dark">
           <div className="modal-body">
             <div className="modal-image-container">
+              <button type="button" className="modal-nav-btn left" onClick={handlePrev} disabled={index === 0}>
+                <FontAwesomeIcon icon={faChevronLeft} />
+              </button>
+              
               <img src={images[index]} alt={`Gallery item ${index + 1}`} className="img-fluid" />
+              
+              <button type="button" className="modal-nav-btn right" onClick={handleNext} disabled={index === images.length - 1}>
+                <FontAwesomeIcon icon={faChevronRight} />
+              </button>
             </div>
           </div>
           <div className="modal-footer justify-content-between">
-            <button type="button" className="btn btn-secondary" onClick={handlePrev} disabled={index === 0}>
-              <FontAwesomeIcon icon={faChevronLeft} />
-            </button>
             <span className="modal-index">
               {index + 1} / {images.length}
             </span>
-            <button type="button" className="btn btn-secondary" onClick={handleNext} disabled={index === images.length - 1}>
-              <FontAwesomeIcon icon={faChevronRight} />
-            </button>
           
             <button type="button" className="btn btn-danger" onClick={onClose}>
               <FontAwesomeIcon icon={faTimes} />
