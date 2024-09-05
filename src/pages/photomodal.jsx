@@ -145,7 +145,7 @@ const PhotoModal = ({ isOpen, currentIndex, images, onClose }) => {
               alt={`Gallery item ${index + 1}`}
               className={`wp-modal-image ${isZoomed ? 'zoomed' : ''}`}
               onMouseDown={handleMouseDown}
-              style={{ transform: `translate(${imgPos.x}px, ${imgPos.y}px) scale(${isZoomed ? 1.5 : 1})` }}
+              style={{ transform: `translate(${imgPos.x}px, ${imgPos.y}px) scale(${isZoomed ? 1.2 : 1})` }}
             />
           </div>
         </div>
