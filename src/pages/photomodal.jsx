@@ -33,6 +33,12 @@ const PhotoModal = ({ isOpen, currentIndex, images, onClose }) => {
     };
   }, [isOpen, index]);
 
+  useEffect(() => {
+    if (!isOpen) {
+      resetZoomAndPosition();
+    }
+  }, [isOpen]);
+
   const handleNext = () => {
     if (index < images.length - 1) {
       setIndex(index + 1);
@@ -115,6 +121,10 @@ const PhotoModal = ({ isOpen, currentIndex, images, onClose }) => {
     }
   };
 
+  const handleContextMenu = (e) => {
+    e.preventDefault(); // Prevent right-click menu
+  };
+
   if (!isOpen) return null;
 
   return (
@@ -145,6 +155,8 @@ const PhotoModal = ({ isOpen, currentIndex, images, onClose }) => {
               alt={`Gallery item ${index + 1}`}
               className={`wp-modal-image ${isZoomed ? 'zoomed' : ''}`}
               onMouseDown={handleMouseDown}
+              onContextMenu={handleContextMenu} // Prevent right-click context menu
+              draggable={false} // Prevent image dragging
               style={{ transform: `translate(${imgPos.x}px, ${imgPos.y}px) scale(${isZoomed ? 1.2 : 1})` }}
             />
           </div>
