@@ -23,12 +23,14 @@
 /* Шапка модального окна с нумерацией, лупой и кнопкой закрытия */
 .wp-modal-header {
   position: absolute;
+ 
   top: 0;
   left: 0;
   right: 0;
   display: flex;
   justify-content: space-between;
   padding: 10px;
+  
   z-index: 1000;
 }
 
@@ -96,6 +98,7 @@
   transform-origin: center center;
 }
 
+/* Горизонтальное и вертикальное перемещение в зуме */
 .wp-modal-image.zoomed-mobile {
   cursor: grab;
   object-fit: none;
@@ -131,6 +134,8 @@
 .modal-nav-btn.right {
   right: 0;
 }
+
+
 
 .modal-nav-btn:disabled {
   background: rgba(0, 0, 0, 0.3);

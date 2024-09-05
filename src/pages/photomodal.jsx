@@ -9,8 +9,6 @@ const PhotoModal = ({ isOpen, currentIndex, images, onClose }) => {
   const [isDragging, setIsDragging] = useState(false);
   const [startPos, setStartPos] = useState({ x: 0, y: 0 });
   const [imgPos, setImgPos] = useState({ x: 0, y: 0 });
-  const [scale, setScale] = useState(1);
-  const [startDistance, setStartDistance] = useState(null);
   const imgRef = useRef(null);
 
   useEffect(() => {
@@ -65,7 +63,6 @@ const PhotoModal = ({ isOpen, currentIndex, images, onClose }) => {
 
   const resetZoomAndPosition = () => {
     setIsZoomed(false);
-    setScale(1);
     setImgPos({ x: 0, y: 0 });
   };
 
@@ -100,9 +97,6 @@ const PhotoModal = ({ isOpen, currentIndex, images, onClose }) => {
   };
 
   const handleTouchStart = (e) => {
-    if (e.touches.length === 2) {
-      setStartDistance(getDistance(e.touches[0], e.touches[1]));
-    }
     if (isZoomed) {
       setIsDragging(true);
       const touch = e.touches[0];
@@ -118,15 +112,6 @@ const PhotoModal = ({ isOpen, currentIndex, images, onClose }) => {
       const moveY = touch.clientY - startPos.y;
       setImgPos({ x: moveX, y: moveY });
     }
-    if (e.touches.length === 2) {
-      const newDistance = getDistance(e.touches[0], e.touches[1]);
-      const newScale = newDistance / startDistance;
-      setScale(newScale);
-      setImgPos({
-        x: (e.touches[0].clientX + e.touches[1].clientX) / 2 - imgRef.current.clientWidth * newScale / 2,
-        y: (e.touches[0].clientY + e.touches[1].clientY) / 2 - imgRef.current.clientHeight * newScale / 2
-      });
-    }
   };
 
   const handleTouchEnd = () => {
@@ -138,13 +123,6 @@ const PhotoModal = ({ isOpen, currentIndex, images, onClose }) => {
 
   const handleContextMenu = (e) => {
     e.preventDefault(); // Prevent right-click menu
-  };
-
-  const getDistance = (touch1, touch2) => {
-    return Math.sqrt(
-      Math.pow(touch2.clientX - touch1.clientX, 2) +
-      Math.pow(touch2.clientY - touch1.clientY, 2)
-    );
   };
 
   if (!isOpen) return null;
@@ -179,7 +157,7 @@ const PhotoModal = ({ isOpen, currentIndex, images, onClose }) => {
               onMouseDown={handleMouseDown}
               onContextMenu={handleContextMenu} // Prevent right-click context menu
               draggable={false} // Prevent image dragging
-              style={{ transform: `translate(${imgPos.x}px, ${imgPos.y}px) scale(${scale})` }}
+              style={{ transform: `translate(${imgPos.x}px, ${imgPos.y}px) scale(${isZoomed ? 1.2 : 1})` }}
             />
           </div>
         </div>
