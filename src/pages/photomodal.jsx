@@ -6,13 +6,14 @@ import './photomodal.css';
 const PhotoModal = ({ isOpen, currentIndex, images, onClose }) => {
   const [index, setIndex] = useState(currentIndex);
   const [isZoomed, setIsZoomed] = useState(false);
-  const [imagePosition, setImagePosition] = useState({ x: 0, y: 0 });
-  const [dragStart, setDragStart] = useState(null);
-  const imageRef = useRef(null);
+  const [isDragging, setIsDragging] = useState(false);
+  const [startPos, setStartPos] = useState({ x: 0, y: 0 });
+  const [imgPos, setImgPos] = useState({ x: 0, y: 0 });
+  const imgRef = useRef(null);
 
   useEffect(() => {
     setIndex(currentIndex);
-  }, [currentIndex, isOpen]);
+  }, [currentIndex]);
 
   useEffect(() => {
     const handleKeyDown = (e) => {
@@ -35,49 +36,83 @@ const PhotoModal = ({ isOpen, currentIndex, images, onClose }) => {
   const handleNext = () => {
     if (index < images.length - 1) {
       setIndex(index + 1);
-      resetZoom();
+      resetZoomAndPosition();
     }
   };
 
   const handlePrev = () => {
     if (index > 0) {
       setIndex(index - 1);
-      resetZoom();
+      resetZoomAndPosition();
     }
   };
 
   const toggleZoom = () => {
-    setIsZoomed(!isZoomed);
     if (isZoomed) {
-      resetZoom();
+      resetZoomAndPosition();
+    } else {
+      setIsZoomed(true);
     }
   };
 
-  const resetZoom = () => {
+  const resetZoomAndPosition = () => {
     setIsZoomed(false);
-    setImagePosition({ x: 0, y: 0 });
+    setImgPos({ x: 0, y: 0 });
   };
 
   const handleMouseDown = (e) => {
-    if (isZoomed) {
-      setDragStart({ x: e.clientX, y: e.clientY });
+    if (isZoomed && e.button === 0) {
+      setIsDragging(true);
+      setStartPos({ x: e.clientX - imgPos.x, y: e.clientY - imgPos.y });
+      imgRef.current.classList.add('grabbing');
     }
   };
 
   const handleMouseMove = (e) => {
-    if (isZoomed && dragStart) {
-      const dx = e.clientX - dragStart.x;
-      const dy = e.clientY - dragStart.y;
-      setImagePosition((prevPosition) => ({
-        x: prevPosition.x + dx,
-        y: prevPosition.y + dy,
-      }));
-      setDragStart({ x: e.clientX, y: e.clientY });
+    if (isDragging && isZoomed) {
+      const moveX = e.clientX - startPos.x;
+      const moveY = e.clientY - startPos.y;
+      setImgPos({ x: moveX, y: moveY });
     }
   };
 
   const handleMouseUp = () => {
-    setDragStart(null);
+    setIsDragging(false);
+    if (imgRef.current) {
+      imgRef.current.classList.remove('grabbing');
+    }
+  };
+
+  const handleMouseLeave = () => {
+    setIsDragging(false);
+    if (imgRef.current) {
+      imgRef.current.classList.remove('grabbing');
+    }
+  };
+
+  const handleTouchStart = (e) => {
+    if (isZoomed) {
+      setIsDragging(true);
+      const touch = e.touches[0];
+      setStartPos({ x: touch.clientX - imgPos.x, y: touch.clientY - imgPos.y });
+      imgRef.current.classList.add('grabbing');
+    }
+  };
+
+  const handleTouchMove = (e) => {
+    if (isDragging && isZoomed) {
+      const touch = e.touches[0];
+      const moveX = touch.clientX - startPos.x;
+      const moveY = touch.clientY - startPos.y;
+      setImgPos({ x: moveX, y: moveY });
+    }
+  };
+
+  const handleTouchEnd = () => {
+    setIsDragging(false);
+    if (imgRef.current) {
+      imgRef.current.classList.remove('grabbing');
+    }
   };
 
   if (!isOpen) return null;
@@ -86,47 +121,40 @@ const PhotoModal = ({ isOpen, currentIndex, images, onClose }) => {
     <div className="wp-modal-overlay fullscreen">
       <div className="wp-modal-content fullscreen-dialog">
         <div className="wp-modal-header">
-          <span className="modal-index">
-            {index + 1} / {images.length}
-          </span>
-          <button type="button" className="wp-modal-close" onClick={onClose}>
+          <span className="modal-index">{index + 1} / {images.length}</span>
+          <button className="wp-modal-zoom" onClick={toggleZoom}>
+            <FontAwesomeIcon icon={isZoomed ? faSearchMinus : faSearchPlus} />
+          </button>
+          <button className="wp-modal-close" onClick={onClose}>
             <FontAwesomeIcon icon={faTimes} />
           </button>
         </div>
-        <div className="wp-modal-body">
-          <button type="button" className="modal-nav-btn left" onClick={handlePrev} disabled={index === 0}>
-            <FontAwesomeIcon icon={faChevronLeft} />
-          </button>
-          
-          <div
-            className={`wp-modal-image-container ${isZoomed ? 'zoomed' : ''}`}
-            onMouseDown={handleMouseDown}
-            onMouseMove={handleMouseMove}
-            onMouseUp={handleMouseUp}
-            style={{
-              cursor: isZoomed ? 'grab' : 'auto',
-            }}
-          >
+        <div 
+          className="wp-modal-body"
+          onMouseMove={handleMouseMove}
+          onMouseUp={handleMouseUp}
+          onMouseLeave={handleMouseLeave}
+          onTouchMove={handleTouchMove}
+          onTouchEnd={handleTouchEnd}
+          onTouchStart={handleTouchStart}
+        >
+          <div className="wp-modal-image-container">
             <img
+              ref={imgRef}
               src={images[index]}
               alt={`Gallery item ${index + 1}`}
               className={`wp-modal-image ${isZoomed ? 'zoomed' : ''}`}
-              ref={imageRef}
-              style={{
-                transform: `translate(${imagePosition.x}px, ${imagePosition.y}px) scale(${isZoomed ? 2 : 1})`,
-              }}
+              onMouseDown={handleMouseDown}
+              style={{ transform: `translate(${imgPos.x}px, ${imgPos.y}px) scale(${isZoomed ? 1.5 : 1})` }}
             />
           </div>
-
-          <button type="button" className="modal-nav-btn right" onClick={handleNext} disabled={index === images.length - 1}>
-            <FontAwesomeIcon icon={faChevronRight} />
-          </button>
         </div>
-        <div className="wp-modal-footer">
-          <button type="button" className="btn btn-primary" onClick={toggleZoom}>
-            <FontAwesomeIcon icon={isZoomed ? faSearchMinus : faSearchPlus} /> 
-          </button>
-        </div>
+        <button className="modal-nav-btn left" onClick={handlePrev} disabled={index === 0}>
+          <FontAwesomeIcon icon={faChevronLeft} />
+        </button>
+        <button className="modal-nav-btn right" onClick={handleNext} disabled={index === images.length - 1}>
+          <FontAwesomeIcon icon={faChevronRight} />
+        </button>
       </div>
     </div>
   );
