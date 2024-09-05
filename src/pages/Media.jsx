@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { storage, ref, listAll, getDownloadURL } from '../firebase';
-import { useInView } from 'react-intersection-observer';
+import LazyLoad from 'react-lazyload'; // Импортируем LazyLoad
 import PhotoModal from './photomodal';
 import './gallery.css';
 
@@ -8,7 +8,6 @@ const Media = () => {
   const [imageUrls, setImageUrls] = useState([]);
   const [modalOpen, setModalOpen] = useState(false);
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
-  const { ref: inViewRef, inView } = useInView({ triggerOnce: true });
 
   useEffect(() => {
     const fetchImages = async () => {
@@ -50,11 +49,12 @@ const Media = () => {
             <div
               key={index}
               className="col-md-4 mb-4"
-              ref={inViewRef}
               onClick={() => openModal(index)}
             >
               <div className="square">
-                <img src={url} alt={`Gallery item ${index + 1}`} className="img-fluid img-cropped" />
+                <LazyLoad height={200} offset={100}>
+                  <img src={url} alt={`Gallery item ${index + 1}`} className="img-fluid img-cropped" />
+                </LazyLoad>
               </div>
             </div>
           ))}
