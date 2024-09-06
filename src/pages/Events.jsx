@@ -79,16 +79,16 @@ const Events = () => {
               </div>
               <div className="carousel-inner">
                 <div className="carousel-item active">
-                  <img src="./images/yl1.jpg" className="img-fluid w-100" style={{ objectFit: 'cover', height: '100%' }} alt="younglife" />
+                  <img src="./images/yl1.webp" className="img-fluid w-100" style={{ objectFit: 'cover', height: '100%' }} alt="younglife" />
                 </div>
                 <div className="carousel-item">
-                  <img src="./images/yl2.jpg" className="img-fluid w-100" style={{ objectFit: 'cover', height: '100%' }} alt="younglife" />
+                  <img src="./images/yl2.webp" className="img-fluid w-100" style={{ objectFit: 'cover', height: '100%' }} alt="younglife" />
                 </div>
                 <div className="carousel-item">
-                  <img src="./images/yl4.jpg" className="img-fluid w-100" style={{ objectFit: 'cover', height: '100%' }} alt="younglife" />
+                  <img src="./images/yl4.webp" className="img-fluid w-100" style={{ objectFit: 'cover', height: '100%' }} alt="younglife" />
                 </div>
                 <div className="carousel-item">
-                  <img src="./images/yl3.jpg" className="img-fluid w-100" style={{ objectFit: 'cover', height: '100%' }} alt="younglife" />
+                  <img src="./images/yl3.webp" className="img-fluid w-100" style={{ objectFit: 'cover', height: '100%' }} alt="younglife" />
                 </div>
               </div>
 
