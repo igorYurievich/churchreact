@@ -11,7 +11,7 @@ const Media = () => {
 
   useEffect(() => {
     const fetchImages = async () => {
-      const galleryRef = ref(storage, 'gallery_unsorted');
+      const galleryRef = ref(storage, 'gallery_webp');
       try {
         const result = await listAll(galleryRef);
         const urlPromises = result.items.map((itemRef) => getDownloadURL(itemRef));
