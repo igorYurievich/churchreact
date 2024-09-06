@@ -78,7 +78,7 @@ const Home = () => {
       <div className="accordion-body" style={{ textAlign: 'justify' }}>
         <div className="row flex-md-nowrap flex-wrap">
           <div className="col-md-6 d-flex">
-            <img src="/images/book.jpeg" alt="Bible Study" className="img-fluid custom-img" style={{ width: '600px', marginBottom: '15px' }} />
+            <img src="/images/book.webp" alt="Bible Study" className="img-fluid custom-img" style={{ width: '600px', marginBottom: '15px' }} />
           </div>
           <div className="col-md-5 text-justify">
             <strong>Каждую неделю мы собираемся для изучения Библии. </strong>
@@ -99,7 +99,7 @@ const Home = () => {
       <div className="accordion-body" style={{ textAlign: 'justify' }}>
         <div className="row flex-md-nowrap flex-wrap">
           <div className="col-md-6 d-flex">
-            <img src="/images/event3.jpg" alt="God bless" className="img-fluid custom-img" style={{ width: '600px', marginBottom: '15px' }} />
+            <img src="/images/event3.webp" alt="God bless" className="img-fluid custom-img" style={{ width: '600px', marginBottom: '15px' }} />
           </div>
           <div className="col-md-5 text-justify">
             <strong>Служение — это неотъемлемая часть нашей духовной жизни. </strong>
@@ -120,7 +120,7 @@ const Home = () => {
       <div className="accordion-body" style={{ textAlign: 'justify' }}>
         <div className="row flex-md-nowrap flex-wrap">
           <div className="col-md-6 d-flex justify-content-center">
-            <img src="/images/event2.jpg" alt="Young Life Camp" className="img-fluid custom-img" style={{ width: '600px', marginBottom: '15px' }} />
+            <img src="/images/event2.webp" alt="Young Life Camp" className="img-fluid custom-img" style={{ width: '600px', marginBottom: '15px' }} />
           </div>
           <div className="col-md-5 text-justify">
             <strong>Детские лагеря Young Life — это уникальная возможность для роста и приключений. </strong>
@@ -141,7 +141,7 @@ const Home = () => {
       <div className="accordion-body" style={{ textAlign: 'justify' }}>
         <div className="row">
           <div className="col-md-5">
-            <img src="/images/media056.jpg" alt="Youth Meeting" className="img-fluid" style={{ width: '500px', height: 'auto', marginBottom: '15px' }} />
+            <img src="/images/media056.webp" alt="Youth Meeting" className="img-fluid" style={{ width: '500px', height: 'auto', marginBottom: '15px' }} />
           </div>
           <div className="col-md-7">
             <strong>Наши молодежные встречи проводятся каждую пятницу. </strong>

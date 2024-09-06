@@ -6,7 +6,7 @@ const NavBar = () => {
     <nav className="navbar navbar-expand-lg">
       <div className="container-fluid d-flex align-items-center">
         <Link to="/">
-          <img src="./images/logo.png" alt="Description of the image" className="logo" />
+          <img src="./images/logo.webp" alt="Description of the image" className="logo" />
         </Link>
         <button 
           className="navbar-toggler ms-auto" 
