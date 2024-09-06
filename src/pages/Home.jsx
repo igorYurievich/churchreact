@@ -10,7 +10,7 @@ const Home = () => {
         <div className="text-overlay">
           <h1 id="titul">Церковь ЕХБ <br />"Свет Жизни"</h1>
         </div>
-        <img src="/images/media134.png" alt="Описание изображения" />
+        <img src="/images/media134.webp" alt="Описание изображения" />
       </div>
     
       <div className="container-md py-4">
