@@ -7,7 +7,7 @@ const Events = () => {
         <div className="text-overlay">
           <h3 id="titul">20/10/2024 - Праздник Жатвы</h3>
         </div>
-        <img src="/images/eventbanner.jpg" alt="Event banner" />
+        <img src="/images/eventbanner.webp" alt="Event banner" />
       </div>
       <div className="container">
         <h1 id="titull" className="container pt-4 text-center">Наши мероприятия</h1>
