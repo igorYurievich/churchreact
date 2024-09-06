@@ -55,7 +55,7 @@ const Donate = () => {
           </div>
           <div className="col-md-6 d-flex justify-content-center align-items-center py-2 mt-3">
             <div className="card" style={{ width: '40rem' }}>
-              <img src="./images/jesushand.png" className="card-img-top" alt="Bible Image" />
+              <img src="./images/jesushand.webp" className="card-img-top" alt="Bible Image" />
               <div className="card-body">
                 <p className="card-text" style={{ fontStyle: 'italic' }}>
                   "Призови Меня в день скорби; Я избавлю тебя, и ты прославишь Меня." — Псалом 49:15
