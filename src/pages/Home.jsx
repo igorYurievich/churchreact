@@ -1,4 +1,5 @@
 import React from 'react';
+import LazyLoad from 'react-lazyload';
 import './Home.css';
 import './adition.css';
 const Home = () => {
@@ -253,14 +254,16 @@ const Home = () => {
     
       <div className="container py-4">
         <h2 className="text-center mb-4 py-4" id="titull">Местоположение</h2>
-        <iframe
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3144.7769664328066!2d-0.6687949999999999!3d37.982334!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd63abf4635afadf%3A0x8148701558086b2!2z0KbQtdGA0LrQvtCy0Ywg0JXQpdCRICLQodCy0LXRgiDQltC40LfQvdC4Ii8gSWdsZXNpYSAiTHV6IERlIFZpZGEi!5e0!3m2!1ses-419!2ses!4v1724672810118!5m2!1ses-419!2ses"
-          width="100%"
-          height="450"
-          style={{ border: 0 }}
-          allowFullScreen=""
-          loading="lazy"
-        ></iframe>
+        <LazyLoad height={450} offset={100}>
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3144.7769664328066!2d-0.6687949999999999!3d37.982334!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd63abf4635afadf%3A0x8148701558086b2!2z0KbQtdGA0LrQvtCy0Ywg0JXQpdCRICLQodCy0LXRgiDQltC40LfQvdC4Ii8gSWdsZXNpYSAiTHV6IERlIFZpZGEi!5e0!3m2!1ses-419!2ses!4v1724672810118!5m2!1ses-419!2ses"
+            width="100%"
+            height="450"
+            style={{ border: 0 }}
+            allowFullScreen=""
+            loading="lazy"
+          ></iframe>
+        </LazyLoad>
       </div>
     </div>
   );
