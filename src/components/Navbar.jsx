@@ -35,7 +35,7 @@ const NavBar = () => {
             </li>
             <li className="nav-item">
               <Link className="nav-link text-light" id="titull" to="/donate">
-                <img src="./images/donation.png" alt="Donate" className="donation-icon" />
+                <img src="./images/donation.webp" alt="Donate" className="donation-icon" />
               </Link>
             </li>
           </ul>
