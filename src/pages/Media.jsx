@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useCallback } from 'react';
 import { storage, ref, listAll, getDownloadURL } from '../firebase';
 import LazyLoad from 'react-lazyload';
 import PhotoModal from './PhotoModal';
@@ -9,30 +9,30 @@ const Media = () => {
   const [modalOpen, setModalOpen] = useState(false);
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
-  useEffect(() => {
-    const fetchImages = async () => {
-      const galleryRef = ref(storage, 'gallery_webp');
-      try {
-        const result = await listAll(galleryRef);
-        const urlPromises = result.items.map((itemRef) => getDownloadURL(itemRef));
-        const urls = await Promise.all(urlPromises);
-        setImageUrls(urls);
-      } catch (error) {
-        console.error('Error fetching images:', error);
-      }
-    };
-
-    fetchImages();
+  const fetchImages = useCallback(async () => {
+    const galleryRef = ref(storage, 'gallery_webp');
+    try {
+      const result = await listAll(galleryRef);
+      const urlPromises = result.items.map((itemRef) => getDownloadURL(itemRef));
+      const urls = await Promise.all(urlPromises);
+      setImageUrls(urls);
+    } catch (error) {
+      console.error('Error fetching images:', error);
+    }
   }, []);
 
-  const openModal = (index) => {
+  useEffect(() => {
+    fetchImages();
+  }, [fetchImages]);
+
+  const openModal = useCallback((index) => {
     setCurrentImageIndex(index);
     setModalOpen(true);
-  };
+  }, []);
 
-  const closeModal = () => {
+  const closeModal = useCallback(() => {
     setModalOpen(false);
-  };
+  }, []);
 
   return (
     <div className="corpo">
@@ -75,7 +75,7 @@ const Media = () => {
           {imageUrls.map((url, index) => (
             <div key={index} className="col-md-4 mb-4" onClick={() => openModal(index)}>
               <div className="square">
-                <LazyLoad height={200} offset={350}> 
+                <LazyLoad height={200} offset={350}>
                   <img src={url} alt={`Gallery item ${index + 1}`} className="img-fluid img-cropped" />
                 </LazyLoad>
               </div>
