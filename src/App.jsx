@@ -9,6 +9,7 @@ import {Donate}  from './pages/Donate';
 import {Rules} from './pages/Rules';
 import {Faith} from './pages/Faith';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import ScrollToTopButton from './pages/ScrollToTopButton'; 
 const App = () => {
   return (
     <Router>
@@ -21,6 +22,7 @@ const App = () => {
         <Route path="rules" element={<Rules />} />
         <Route path="faith" element={<Faith />} />
       </Routes>
+      <ScrollToTopButton /> 
       <Footer />
     </Router>
   );
