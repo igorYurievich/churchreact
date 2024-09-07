@@ -36,21 +36,30 @@ const Media = () => {
 
   return (
     <div className="corpo">
-      <div className="container">
-        <h1 id="titull" className="container pt-4 text-center">Фотографии</h1>
-        <p className="container py-4" style={{ textAlign: 'justify' }} id="intro">
-          Приветствуем вас на нашей странице с фотографиями! Здесь вы найдете яркие моменты с наших богослужений, встреч и других мероприятий.
-        </p>
-      </div>
+    
+       <h1 id="titull" className="container py-4 text-center">Видео</h1>
+       <div className="row px-4">
+                  <div className="col-md-6 py-2">
+                    <div className="ratio ratio-16x9">
+                      <iframe width="560" height="315" src="https://www.youtube.com/embed/7p7PSTqobiQ?si=8ucnmj0OyrC7SeSG" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>
+                    </div>
+                  </div>
+                  <div className="col-md-6 py-2">
+                    <div className="ratio ratio-16x9">
+                      <iframe width="560" height="315" src="https://www.youtube.com/embed/giOXGaxqCqo?si=pA0ZUwtHl2zeNK52" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>
+                    </div>
+                  </div>
+                </div>
+
+    
+        <h1 id="titull" className="container py-4 text-center">Фотографии</h1>
+        
+    
 
       <div className="container">
         <div className="row">
           {imageUrls.map((url, index) => (
-            <div
-              key={index}
-              className="col-md-4 mb-4"
-              onClick={() => openModal(index)}
-            >
+            <div key={index} className="col-md-4 mb-4" onClick={() => openModal(index)}>
               <div className="square">
                 <LazyLoad height={200} offset={100}>
                   <img src={url} alt={`Gallery item ${index + 1}`} className="img-fluid img-cropped" />
@@ -61,12 +70,7 @@ const Media = () => {
         </div>
       </div>
 
-      <PhotoModal
-        isOpen={modalOpen}
-        currentIndex={currentImageIndex}
-        images={imageUrls}
-        onClose={closeModal}
-      />
+      <PhotoModal isOpen={modalOpen} currentIndex={currentImageIndex} images={imageUrls} onClose={closeModal} />
     </div>
   );
 };
