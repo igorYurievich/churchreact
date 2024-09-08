@@ -1,32 +1,40 @@
 import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
-import { VitePWA } from 'vite-plugin-pwa';  // Исправленный импорт плагина
+import { VitePWA } from 'vite-plugin-pwa';
+import { terser } from 'rollup-plugin-terser';
 
-// https://vitejs.dev/config/
 export default defineConfig({
   plugins: [
     react(),
     VitePWA({
-      registerType: 'autoUpdate', // Автоматическое обновление Service Worker
+      registerType: 'autoUpdate',
       devOptions: {
-        enabled: true, // Включение PWA в режиме разработки
+        enabled: true,
       },
       workbox: {
         runtimeCaching: [
           {
-            // Кэширование изображений
-            urlPattern: /\.(?:png|jpg|jpeg|svg|webp|avif)$/, // Исправленное регулярное выражение (две вертикальные черты || были лишними)
-            handler: 'CacheFirst', // Использовать кэш в первую очередь
+            urlPattern: /\.(?:png|jpg|jpeg|svg|webp|avif)$/,
+            handler: 'CacheFirst',
             options: {
               cacheName: 'image-cache',
               expiration: {
-                maxEntries: 50, // Максимальное количество изображений
-                maxAgeSeconds: 30 * 24 * 60 * 60, // Кэширование на 30 дней
+                maxEntries: 50,
+                maxAgeSeconds: 30 * 24 * 60 * 60,
               },
             },
           },
         ],
       },
     }),
+    terser(),  // Добавляем плагин минификации
   ],
+  build: {
+    minify: 'terser',  // Указываем минификацию через Terser
+    terserOptions: {
+      compress: {
+        drop_console: true,  // Убираем console.log для улучшения производительности
+      },
+    },
+  },
 });
