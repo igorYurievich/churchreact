@@ -14,8 +14,8 @@ const Media = () => {
     './images/media144.webp',
     'images_baptism/baptism202301.avif',
     'images_baptism/baptism202306.avif',
-    '.images_baptism/baptism1.avif',
-    '.images_baptism/baptism2.avif'
+    'images_baptism/baptism1.avif',
+    'images_baptism/baptism2.avif'
   ];
 
   // Открыть модальное окно и установить текущее изображение
