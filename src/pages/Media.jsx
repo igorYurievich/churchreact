@@ -12,10 +12,10 @@ const Media = () => {
   const imageUrls = [
     './images/group.png',
     './images/media144.webp',
-    '/public/images_baptism/baptism202301.avif',
-    '/public/images_baptism/baptism202306.avif',
-    './public/images_baptism/baptism1.avif',
-    './public/images_baptism/baptism2.avif'
+    'images_baptism/baptism202301.avif',
+    'images_baptism/baptism202306.avif',
+    '.images_baptism/baptism1.avif',
+    '.images_baptism/baptism2.avif'
   ];
 
   // Открыть модальное окно и установить текущее изображение
