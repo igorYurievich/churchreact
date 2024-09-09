@@ -21,7 +21,7 @@ const Rules = () => {
                 <div className="accordion-item">
                     <h2 className="accordion-header" id="headingOne">
                         <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
-                        <strong>1. Название и доктрины Церкви</strong>
+                        <strong id="titull">1. Название и доктрины Церкви</strong>
                         </button>
                     </h2>
                     <div id="collapseOne" className="accordion-collapse collapse " aria-labelledby="headingOne" >
@@ -48,7 +48,7 @@ const Rules = () => {
                 <div className="accordion-item">
                     <h2 className="accordion-header" id="headingTwo">
                         <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                            <strong>2. Цели Церкви «Свет Жизни»</strong>
+                            <strong id="titull">2. Цели Церкви «Свет Жизни»</strong>
                         </button>
                     </h2>
                     <div id="collapseTwo" className="accordion-collapse collapse" aria-labelledby="headingTwo" >
@@ -68,7 +68,7 @@ const Rules = () => {
                 <div className="accordion-item">
                     <h2 className="accordion-header" id="headingThree">
                         <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                            <strong>3. Членство в церкви</strong>
+                            <strong id="titull">3. Членство в церкви</strong>
                         </button>
                     </h2>
                     <div id="collapseThree" className="accordion-collapse collapse" aria-labelledby="headingThree" >
@@ -106,7 +106,7 @@ const Rules = () => {
                 <div className="accordion-item">
                     <h2 className="accordion-header" id="headingFour">
                         <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
-                            <strong>4. Привилегии и ответственность членов церкви</strong>
+                            <strong id="titull">4. Привилегии и ответственность членов церкви</strong>
                         </button>
                     </h2>
                     <div id="collapseFour" className="accordion-collapse collapse" aria-labelledby="headingFour" >
@@ -134,7 +134,7 @@ const Rules = () => {
                 <div className="accordion-item">
                     <h2 className="accordion-header" id="headingFive">
                         <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
-                            <strong>5. Церковная дисциплина</strong>
+                            <strong id="titull">5. Церковная дисциплина</strong>
                         </button>
                     </h2>
                     <div id="collapseFive" className="accordion-collapse collapse" aria-labelledby="headingFive" >
@@ -159,7 +159,7 @@ const Rules = () => {
                 <div className="accordion-item">
                     <h2 className="accordion-header" id="headingSix">
                         <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
-                            <strong>6. Церковное управление</strong>
+                            <strong id="titull">6. Церковное управление</strong>
                         </button>
                     </h2>
                     <div id="collapseSix" className="accordion-collapse collapse" aria-labelledby="headingSix" >
@@ -368,7 +368,7 @@ const Rules = () => {
                 <div className="accordion-item">
                     <h2 className="accordion-header" id="headingSeven">
                         <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven">
-                            <strong>7. Финансы и администрация церкви</strong>
+                            <strong id="titull">7. Финансы и администрация церкви</strong>
                         </button>
                     </h2>
                     <div id="collapseSeven" className="accordion-collapse collapse" aria-labelledby="headingSeven">
@@ -427,7 +427,7 @@ const Rules = () => {
                 <div className="accordion-item">
                     <h2 className="accordion-header" id="headingEight">
                         <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseEight" aria-expanded="false" aria-controls="collapseEight">
-                            <strong>8. Разрешение спорных вопросов</strong>
+                            <strong id="titull">8. Разрешение спорных вопросов</strong>
                         </button>
                     </h2>
                     <div id="collapseEight" className="accordion-collapse collapse" aria-labelledby="headingEight">
@@ -442,8 +442,8 @@ const Rules = () => {
 
                 <div className="accordion-item">
                     <h2 className="accordion-header" id="headingAppendix">
-                        <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseAppendix" aria-expanded="false" aria-controls="collapseAppendix">
-                        (Приложение к церковному уставу) Позиция Церкви «Свет Жизни» по вопросам брака, развода, повторного брака и сексуальности
+                        <button className="accordion-button collapsed" id="titull" type="button" data-bs-toggle="collapse" data-bs-target="#collapseAppendix" aria-expanded="false" aria-controls="collapseAppendix">
+                        Позиция Церкви «Свет Жизни» по вопросам брака, развода, повторного брака и сексуальности
                         </button>
                     </h2>
                     <div id="collapseAppendix" className="accordion-collapse collapse" aria-labelledby="headingAppendix">

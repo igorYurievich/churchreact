@@ -24,7 +24,7 @@ const Faith = () => {
                     <div className="accordion-item">
                         <h2 className="accordion-header">
                             <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
-                                <strong>О Слове Божием</strong>
+                                <strong id="titull">О Слове Божием</strong>
                             </button>
                         </h2>
                         <div id="collapseOne" className="accordion-collapse collapse" aria-labelledby="titull">
@@ -43,7 +43,7 @@ const Faith = () => {
                     <div className="accordion-item">
                         <h2 className="accordion-header" id="headingOne">
                             <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                                <strong>О Боге</strong>
+                                <strong id="titull">О Боге</strong>
                             </button>
                         </h2>
                         <div id="collapseTwo" className="accordion-collapse collapse" aria-labelledby="headingOne">
@@ -69,7 +69,7 @@ const Faith = () => {
                     <div className="accordion-item">
                         <h2 className="accordion-header" id="headingThree">
                             <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                                <strong>О человеке</strong>
+                                <strong id="titull">О человеке</strong>
                             </button>
                         </h2>
                         <div id="collapseThree" className="accordion-collapse collapse" aria-labelledby="headingThree">
@@ -82,7 +82,7 @@ const Faith = () => {
                     <div className="accordion-item">
                         <h2 className="accordion-header" id="headingFour">
                             <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
-                                <strong>О грехе</strong>
+                                <strong id="titull">О грехе</strong>
                             </button>
                         </h2>
                         <div id="collapseFour" className="accordion-collapse collapse" aria-labelledby="headingFour">
@@ -95,7 +95,7 @@ const Faith = () => {
                     <div className="accordion-item">
                         <h2 className="accordion-header" id="headingNine">
                             <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseNine" aria-expanded="false" aria-controls="collapseNine">
-                                <strong>О спасении</strong>
+                                <strong id="titull">О спасении</strong>
                             </button>
                         </h2>
                         <div id="collapseNine" className="accordion-collapse collapse" aria-labelledby="headingNine">
@@ -127,7 +127,7 @@ const Faith = () => {
                     <div className="accordion-item">
                         <h2 className="accordion-header" id="headingSeven">
                             <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven">
-                                <strong>О церкви</strong>
+                                <strong id="titull">О церкви</strong>
                             </button>
                         </h2>
                         <div id="collapseSeven" className="accordion-collapse collapse" aria-labelledby="headingSeven">
@@ -275,7 +275,7 @@ const Faith = () => {
                     <div className="accordion-item">
                         <h2 className="accordion-header" id="headingFive">
                             <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
-                                <strong>О браке</strong>
+                                <strong id="titull">О браке</strong>
                             </button>
                         </h2>
                         <div id="collapseFive" className="accordion-collapse collapse" aria-labelledby="headingFive">
@@ -300,7 +300,7 @@ const Faith = () => {
                     <div className="accordion-item">
                         <h2 className="accordion-header" id="headingSix">
                             <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
-                                <strong>О гражданском порядке</strong>
+                                <strong id="titull">О гражданском порядке</strong>
                             </button>
                         </h2>
                         <div id="collapseSix" className="accordion-collapse collapse" aria-labelledby="headingSix">
@@ -327,7 +327,7 @@ const Faith = () => {
                     <div className="accordion-item">
                         <h2 className="accordion-header" id="headingOne">
                             <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseO" aria-expanded="false" aria-controls="collapseO">
-                                <strong>О духовном мире</strong>
+                                <strong id="titull">О духовном мире</strong>
                             </button>
                         </h2>
                         <div id="collapseO" className="accordion-collapse collapse" aria-labelledby="headingO">
@@ -353,7 +353,7 @@ const Faith = () => {
                     <div className="accordion-item">
                         <h2 className="accordion-header" id="headingF">
                             <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseF" aria-expanded="false" aria-controls="collapseF">
-                                <strong>О последних событиях</strong>
+                                <strong id="titull">О последних событиях</strong>
                             </button>
                         </h2>
                         <div id="collapseF" className="accordion-collapse collapse" aria-labelledby="headingF">
