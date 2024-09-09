@@ -1,5 +1,6 @@
 import React, { useState, useCallback } from 'react';
 import PhotoModal from './PhotoModal';
+
 import './gallery.css';
 
 const Media = () => {
