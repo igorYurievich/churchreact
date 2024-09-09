@@ -17,8 +17,7 @@ const Events = () => {
       </div>
 
       <div className="container py-4">
-        <div className="row ">
-          <div className="col-md-6">
+        <div className="container d-flex justify-content-center ">
             <div className="table-responsive py-4">
               <table className="schedule-table">
                 <thead className="thead-light">
@@ -59,7 +58,7 @@ const Events = () => {
                     <td>4 октября</td>
                     <td>19:00</td>
                   </tr>
-                  <tr id="specialEvent">
+                  <tr>
                     <td>Праздник жатвы</td>
                     <td>20 октября</td>
                     <td>19:00</td>
@@ -67,9 +66,9 @@ const Events = () => {
                 </tbody>
               </table>
             </div>
-          </div>
+         
 
-          <div className="col-md-6">
+          {/* <div className="col-md-6">
             <div id="carouselExampleCaptions" className="carousel slide">
               <div className="carousel-indicators">
                 <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" className="active" aria-current="true" aria-label="Slide 1"></button>
@@ -123,7 +122,7 @@ const Events = () => {
 
 
             </div>
-          </div>
+          </div> */}
         </div>
       </div>
 

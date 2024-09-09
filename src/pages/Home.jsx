@@ -71,11 +71,11 @@ const Home = () => {
         <div className="accordion" id="accordionExample">
   <div className="accordion-item">
     <h2 className="accordion-header" id="headingOne">
-      <button className="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+      <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
         <strong id="titull">Изучение Библии</strong>
       </button>
     </h2>
-    <div id="collapseOne" className="accordion-collapse collapse show" aria-labelledby="headingOne">
+    <div id="collapseOne" className="accordion-collapse collapse " aria-labelledby="headingOne">
       <div className="accordion-body" style={{ textAlign: 'justify' }}>
         <div className="row flex-md-nowrap flex-wrap">
           <div className="col-md-6 d-flex">
