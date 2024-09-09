@@ -1,5 +1,5 @@
 import React, { useState, useCallback } from 'react';
-import PhotoModal from './PhotoModal';
+import PhotoModal from './photomodal';
 
 import './gallery.css';
 
